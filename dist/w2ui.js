@@ -10411,7 +10411,7 @@ w2utils.event = {
             var id = w2utils.escapeId(record.recid);
             var isRowSelected = false;
             if (sel.indexes.indexOf(ind) != -1) isRowSelected = true;
-            var rec_style = (record.w2ui ? record.w2ui.style : '');
+            var rec_style = (JSON.parse(record.w2ui) ? JSON.parse(record.w2ui).style : '');
             if (rec_style == null || typeof rec_style != 'string') rec_style = '';
             var rec_class = (record.w2ui ? record.w2ui.class : '');
             if (rec_class == null || typeof rec_class != 'string') rec_class = '';
